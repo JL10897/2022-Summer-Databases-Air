@@ -57,16 +57,5 @@ It serves as the Final Project for Databases course Summer 2022, NYU Shanghai.
   - *register_booking_agent.html*: html file for registering as a Booking Agent
   - *register_customer.html*: html file for registering as a Customer
 
-## Summary of Teamwork
-
-- Yunhao Ye is responsible for the Backend and Frontend developments of: 
-  - 3 types of user Registration
-  - Customer and Booking Agent features
-
-- Xinran Wang is responsible for the Backend and Frontend developments of: 
-  - 3 types of user Login, and the public info page
-  - Airline Staff features
-
-- We collaborated with each other to divide the tasks and carry out the system testing
 
 <img width="917" alt="teamwork_summary" src="https://user-images.githubusercontent.com/50431019/168847343-015672ab-b0fc-4557-b47a-2fd683591466.png">
