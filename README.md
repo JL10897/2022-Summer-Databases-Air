@@ -4,9 +4,9 @@
 
 This is a web-based Airline Ticket Reservation System developed using Python Flask, HTML and PHPMyAdmin. It is developed and tested on the MacOS System.
 
-Team members: Yunhao Ye (yy2572@nyu.edu) and Xinran Wang (xw1744@nyu.edu).
+Team members: Jialin Li
 
-It serves as the Final Project for Databases course Spring 2022, NYU Shanghai.
+It serves as the Final Project for Databases course Summer 2022, NYU Shanghai.
 
 ## Requirements
 
