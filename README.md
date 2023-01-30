@@ -58,4 +58,3 @@ It serves as the Final Project for Databases course Summer 2022, NYU Shanghai.
   - *register_customer.html*: html file for registering as a Customer
 
 
-<img width="917" alt="teamwork_summary" src="https://user-images.githubusercontent.com/50431019/168847343-015672ab-b0fc-4557-b47a-2fd683591466.png">
