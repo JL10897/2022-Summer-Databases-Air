@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+	<h2>Welcome, Airline Staff: {{name}}!</h2>
+	<a href="/home/airline_staff_view_my_flights">View My Flights</a>
+	</br></br>
+	<a href="/home/airline_staff_create_new_flight">Create a New Flight</a>
+	</br></br>
+	<a href="/home/airline_staff_change_flight_status">Change Status of a Flight</a>
+	</br></br>
+	<a href="/home/airline_staff_add_airplane">Add an Airplane</a>
+	</br></br>
+	<a href="/home/airline_staff_add_airport">Add an Airport</a>
+	</br></br>
+	<a href="/home/airline_staff_view_booking_agent">View Booking Agents</a>
+	</br></br>
+	<a href="/home/airline_staff_view_frequent_customer">View Frequent Customers</a>
+	</br></br>
+	<a href="/home/airline_staff_view_reports">View Reports</a>
+	</br></br>
+	<a href="/home/airline_staff_compare_revenue">Comparison of Revenue Earned</a>
+	</br></br>
+	<a href="/home/airline_staff_view_top_destination">View Top Destinations</a>
+	</br></br>
+	<a href="/home/airline_staff_grant_new_permission">Grant New Permissions to Airline Staff</a>
+	</br></br>
+	<a href="/home/airline_staff_add_booking_agent">Add/Delete Booking Agent for My Airline</a>
+	</br></br></br>
+	<a href="/logout">Logout</a>
+
+	{% for message in get_flashed_messages() %}
+        <h3>Error: {{ message }}</h3>
+    {% endfor %}
+
+</body>
+</html>

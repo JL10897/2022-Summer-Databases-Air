@@ -1,0 +1,86 @@
+<html>
+<head>
+</head>
+<body>
+<style type="text/css">
+	table, th, td{
+		border: 0.5px solid black;
+	}
+</style>
+
+<h2>Search For Flights</h2>
+<h3> Filters: </h3>
+<form action="/home/booking_agent_search_for_flights" method="POST">
+    <label for="start">Departure date starts from:</label>
+    <input type="date" name="range_start" onfocus="this.min=new Date().toISOString().split('T')[0]">
+    </br>
+    <label for="end">Departure date ends at:</label>
+    <input type="date" name="range_end" onfocus="this.min=new Date().toISOString().split('T')[0]">
+
+    <p>
+        <label for="departure">Departure City and Airport:</label>
+        {% for d in departure_airport_city %}
+        <input type="checkbox" name="departure: {{loop.index0}}">{{d['departure_city']}}, {{d['depart_airport']}}
+        {% endfor %}
+    </p>
+
+    <p>
+        <label for="arrival">Arrival City and Airport:</label>
+        {% for a in arrival_airport_city %}
+        <input type="checkbox" name="arrival: {{loop.index0}}">{{a['arrival_city']}}, {{a['arr_airport']}}
+        {% endfor %}
+    </p>
+
+    <input type="submit" value = submit />
+</form>
+
+
+
+<h3> Search Results: </h3>
+<table>
+    <th>Airline Name</th>
+	<th>Flight Number</th>
+    <th>Departure Airport</th>
+    <th>Arrival Airport</th>
+    <th>Departure Time</th>
+    <th>Arrival Time</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Airplane ID</th>
+
+    {% for line in flights %}
+	<tr>
+		<td>{{line['airline_name']}}</td>
+		<td>{{line['flight_num']}}</td>
+		<td>{{line['departure_airport']}}</td>
+		<td>{{line['arrival_airport']}}</td>
+		<td>{{line['departure_time']}}</td>
+		<td>{{line['arrival_time']}}</td>
+		<td>{{line['price']}}</td>
+		<td>{{line['status']}}</td>
+        <td>{{line['airplane_id']}}</td>
+
+	</tr>
+    {% endfor %}
+</table>
+</br>
+<h2>Purchase Tickets</h2>
+<form action="/home/booking_agent_purchase_tickets" method="POST">
+    <input type="text" name = "email" placeholder="customer email" required/> </br>
+    <input type="text" name = "airline_name" placeholder="airline name" required/> </br>
+    <input type="number" name = "flight_num" placeholder="flight number" required/></br>
+    <input type="submit" value = Purchase /></br>
+    {% if error %}
+        {% for message in get_flashed_messages() %}
+        <h3>Error: {{ message }}</h3>
+        {% endfor %}
+    {% else %}
+        {% for message in get_flashed_messages() %}
+        <h3>Success! {{ message }}</h3>
+        {% endfor %}
+    {% endif %}
+</form>
+</br>
+<a href="/home">Go back</a>
+</body>
+</html>

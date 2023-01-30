@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<style type="text/css">
+	table, th, td{
+		border: 0.5px solid black;
+	}
+</style>
+
+<h2>View Top Customers</h2>
+
+<h3> Customers with Most Number of Tickets in Last 6 Months</h3>
+{% if empty_1 %}
+<h3>Warning: There Is NO Data, NO Bar Chart Available!</h3>
+{% else %}
+<img src="data:image/png;base64, {{ plot_url_1 }}">
+{% endif %}
+
+<h3> Customers with Most Commission Received in Last Year  </h3>
+{% if empty_2 %}
+<h3>Warning: There Is NO Data, NO Bar Chart Available!</h3>
+{% else %}
+<img src="data:image/png;base64, {{ plot_url_2 }}">
+{% endif %}
+
+
+
+</br>
+<a href="/home">Go back</a>
+</body>
+</html>
